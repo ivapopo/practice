@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-y = input("Введите год для проверки: ")
-if type(y) != int:
-  print "Это не год :("
+g = input("Введите год:")
+if type(g) != int:
+  print "Введите число!"
 else:
-  if y%400==0:
+  if g%400==0:
     print("Високосный")
-  elif y%100==0:
+  elif g%100==0:
     print("Невисокосный")
-  elif y%4==0:
+  elif g%4==0:
     print("Високосный")
   else:
     print("Не високосный")
