@@ -13,11 +13,9 @@ class Migration(SchemaMigration):
                       self.gf('django.db.models.fields.BooleanField')(default=False),
                       keep_default=False)
 
-
     def backwards(self, orm):
         # Deleting field 'Customer.is_approved'
         db.delete_column(u'orders_customer', 'is_approved')
-
 
     models = {
         u'books.author': {
