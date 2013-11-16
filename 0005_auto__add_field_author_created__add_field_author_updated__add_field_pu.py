@@ -48,7 +48,6 @@ class Migration(SchemaMigration):
                       self.gf('django.db.models.fields.DateTimeField')(auto_now=True, default=datetime.datetime(2013, 11, 16, 0, 0), db_index=True, blank=True),
                       keep_default=False)
 
-
     def backwards(self, orm):
         # Deleting field 'Author.created'
         db.delete_column(u'books_author', 'created')
@@ -73,7 +72,6 @@ class Migration(SchemaMigration):
 
         # Deleting field 'BooksImage.updated'
         db.delete_column(u'books_booksimage', 'updated')
-
 
     models = {
         u'books.author': {
